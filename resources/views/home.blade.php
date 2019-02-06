@@ -13,15 +13,15 @@
 @stop
 
 @section('content')
+    @include('painel.includes.alerts')
     <div class="row">
-        <div class="col-sm-6">
-            <div style="width: 500px; height: 500px;">
-                {!! Mapper::render() !!}
-            </div>
-        </div>
         <div class="col-sm-6">
             @include('painel.rotas.cadRotas')
         </div>
+        <div class="col-sm-6">
+            <div id="map" style="width: 500px; height: 500px;">
+                {!! Mapper::render() !!}
+            </div>
+        </div>
     </div>
 @stop
-

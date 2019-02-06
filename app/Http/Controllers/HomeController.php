@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        Mapper::map(53.381128999999990000, -1.470085000000040000, ['zoom' => 10, 'markers' => ['title' => 'My Location', 'animation' => 'DROP'], 'clusters' => ['size' => 10, 'center' => true, 'zoom' => 20]]);
+        Mapper::map(53.381128999999990000, -1.470085000000040000, ['zoom' => 10, 'markers' => ['title' => 'Minha Localização', 'animation' => 'DROP', 'icon' => 'img\MapsIcons\blue-dot2.png'], 'clusters' => ['size' => 10, 'center' => true, 'zoom' => 20]]);
         return view('home');
     }
 }

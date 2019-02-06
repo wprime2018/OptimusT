@@ -18,7 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('best_tel',30);
+            $table->string('type_persona',1);
+            $table->string('cnpj',20);
+            $table->string('cpf',20);
+            $table->string('type_user',2);
+            $table->integer('id_address', false, true);
+            $table->foreign('id_address')->references('id')->on('adresses')->onDelete('cascade');
             $table->string('password');
+            $table->boolean('active');
             $table->rememberToken();
             $table->timestamps();
         });

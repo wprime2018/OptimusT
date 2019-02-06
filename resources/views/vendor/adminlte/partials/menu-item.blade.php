@@ -9,11 +9,11 @@
             <span>{{ $item['text'] }}</span>
             @if (isset($item['label']))
                 <span class="pull-right-container">
-                    <span class="label label-{{ isset($item['label_color']) ? $item['label_color'] : 'primary' }} pull-right">{{ $item['label'] }}</span>
+                    <span class="badge badge-{{ isset($item['label_color']) ? $item['label_color'] : 'primary' }} pull-right">{{ $item['label'] }}</span>
                 </span>
             @elseif (isset($item['submenu']))
                 <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-left pull-right"></i>
                 </span>
             @endif
         </a>
